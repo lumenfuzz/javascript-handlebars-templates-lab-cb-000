@@ -34,14 +34,14 @@
       </form>
     </script>
     <script id="recipe-template" type="text/x-handlebars-template">
-      <h1>{{name}}<h1><br>
+      <h1>{{name}}</h1><br>
       {{> recipeDetailsPartial}}
       <a class="js-make" href="#" onclick="displayEditForm()">Edit Recipe</a>
     </script>
     <script id="recipe-details-partial" type="text/x-handlebars-template">
       <p>{{description}}</p><br>
       <ul>{{#each ingredients}}
-        {{displayIngredient this}}
+        <li>{{displayIngredient this}}</li>
       {{/each}}
     </ul>
     </script>
