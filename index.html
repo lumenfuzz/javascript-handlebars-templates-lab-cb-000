@@ -8,8 +8,6 @@
   </head>
   <body>
     <main id="main">
-      <div id="recipe-render"></div>
-      <div id="form-render"></div>
     </main>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
@@ -19,22 +17,7 @@
     <script>mocha.setup('bdd');</script>
     <script src="test/index-test.js"></script>
     <!-- My solution scripts -->
-    <script id="recipe-form-template" type="text/x-handlebars-template">
-        <form id="recipe-form" onsubmit="createRecipe();return false;">
-          Name: <input type="text" id="name"><br>
-          Description: <input type="textarea" id="description"><br>
-          Ingredients: <ul id="ingredients">
-            <input type="text" name="ingredients"><br>
-            <input type="text" name="ingredients"><br>
-            <input type="text" name="ingredients"><br>
-            <input type="text" name="ingredients"><br>
-            <input type="text" name="ingredients"><br>
-          </ul>
-          <input type="submit">
-        </form>
-    </script>
-    <script id="recipe-template" type="text/x-handlebars-template">
-      Name: {{name}}
+    <script id="recipe-details-partial">
     </script>
   </body>
 </html>
