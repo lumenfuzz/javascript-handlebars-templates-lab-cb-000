@@ -39,8 +39,9 @@
       <a class="js-make" href="#" onclick="displayEditForm()">Edit Recipe</a>
     </script>
     <script id="recipe-details-partial" type="text/x-handlebars-template">
-      <p>{{description}}</p><br>
-      <ul>{{#each ingredients}}
+      <p>{{description}}</p>
+      <ul>Ingredients:
+        {{#each ingredients}}
         <li>{{displayIngredient this}}</li>
       {{/each}}
     </ul>
