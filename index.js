@@ -44,5 +44,20 @@ function displayEditForm() {
 }
 
 function updateRecipe() {
+  var recipe = {
+    name: document.getElementById("name").value,
+    description: document.getElementById("description").value,
+    ingredients: [
+      {name: document.getElementsByName("ingredients")[0].value},
+      {name: document.getElementsByName("ingredients")[1].value},
+      {name: document.getElementsByName("ingredients")[2].value},
+      {name: document.getElementsByName("ingredients")[3].value},
+      {name: document.getElementsByName("ingredients")[4].value},
+    ]
+  }
 
+  var template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+  var result = template(recipe);
+  document.getElementById("recipe-render").innerHTML += result;
+  document.getElementById("form-render").innerHTML = ""
 }
