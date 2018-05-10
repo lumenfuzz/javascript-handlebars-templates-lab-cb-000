@@ -19,8 +19,6 @@
     <script>mocha.setup('bdd');</script>
     <script src="test/index-test.js"></script>
     <!-- My solution scripts -->
-    <script id="recipe-details-partial" type="text/x-handlebars-template">
-    </script>
     <script id="recipe-form-template" type="text/x-handlebars-template">
       <form id="recipe-form" onsubmit="createRecipe();return false;">
         Name: <input type="text" id="name"><br>
@@ -36,6 +34,14 @@
       </form>
     </script>
     <script id="recipe-template" type="text/x-handlebars-template">
+      {{name}}
+      {{> recipeDetailsPartial}}
+    </script>
+    <script id="recipe-details-partial" type="text/x-handlebars-template">
+      {{description}}
+      {{#each ingredient}}
+        {{displayIngredient this}}
+      {{/each}}
     </script>
   </body>
 </html>
